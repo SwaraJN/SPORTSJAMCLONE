@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create-account</title>
+        <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://bit.ly/3ES33CN" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        /* .main{
+            display: flex;
+        } */
+
+        /*  */
+        #Blacknav {
+            /* border: 1px solid red; */
+            height: 40px;
+            width: 103%;
+            margin-top: -8px;
+            /* margin-left: 1/0px; */
+            background-color: rgb(22, 21, 21);
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 17px;
+            font-family: "Open Sans Condensed", sans-serif;
+        }
+
+        .sign {
+            text-decoration: none;
+        }
+
+        .navf {
+            /* font-weight:500; */
+            color: white;
+            line-height: 30px;
+            word-spacing: 7px;
+            /* margin: auto; */
+            /* border: 1px solid red; */
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        .navf:hover {
+            text-decoration: underline;
+        }
+
+        .nav {
+            /* border: 1px solid red; */
+            height: 110px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .logo {
+            color: black;
+            /* border: 1px solid red; */
+            cursor: pointer;
+        }
+
+        input {
+            border: 1px solid black;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+        input:hover {
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+        /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+        .a2>a>p:hover {
+            color: white;
+            transition: 0.1s;
+            background-color: black;
+            border: 2px solid black;
+        }
+
+        .a2>a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            background-color: rgb(31, 28, 28);
+            transition: 0.1s;
+            /* padding-right: 1.5px; */
+            /* padding-left: .5px; */
+            color: white;
+        }
+
+        .a2>a {
+            text-decoration-line: none;
+            color: black;
+            /* padding: 2.5px; */
+            /* background-color: white; */
+        }
+
+        #navDiv2 {
+            border: 1px solid rgb(204, 201, 201);
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+        }
+
+        #navDiv2>a>img {
+
+            width: 70px;
+            height: 47px;
+            padding: 16px;
+        }
+
+        #fav {
+            /* border: 2px solid red; */
+            display: flex;
+            flex: wrap;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 45px;
+            transition: top .1s;
+        }
+
+        #bag2 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        /* 
+#bag1 {
+  margin-top: 5px;
+} */
+        #bag2 {
+            margin-top: 20px;
+        }
+
+        #mainContent {
+            /* margin-top: 300px; */
+            padding-top: 200px;
+            width: 20%;
+        }
+
+        #secNav {
+            position: fixed;
+            border: 0px solid red;
+            height: 300px;
+            margin-left: 25px;
+            width: 90%;
+            position: fixed;
+            background-color: rgb(255, 255, 255);
+            margin-top: 10px;
+            display: none;
+            display: block;
+            transition: top 0.8s;
+        }
+
+        #navdiva {
+            padding: 30px;
+            grid-area: a;
+            border: rgb(235, 235, 235) solid 0.5px;
+            padding-left: 150px;
+            background-color: white;
+        }
+
+        #navdivb {
+            padding: 30px;
+            grid-area: b;
+            display: flex;
+            gap: 140px;
+            border: rgb(228, 228, 228) solid 0.5px;
+            padding-left: 100px;
+            background-color: white;
+        }
+
+        #navdivd {
+            grid-area: d;
+            border: rgb(231, 231, 231) solid 0.5px;
+            padding-left: 96px;
+            display: flex;
+            gap: 175px;
+            background-color: white;
+            row-gap: 40px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+                rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+                rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        }
+
+        #secNav {
+
+            display: grid;
+            grid-template-areas: "a b b b b""a b b b b""a b b b b""a b b b b""c d d d d";
+            display: none;
+
+        }
+
+        .navhighlight {
+            font-weight: bolder;
+            margin-left: 0;
+        }
+
+        a {
+            text-decoration: underline;
+            text-decoration: none;
+            color: black;
+        }
+
+        #navdiva>div {
+            padding: 4px;
+        }
+
+        #navdivb>div>div {
+            padding: 4px;
+        }
+
+        input {
+            vertical-align: top;
+        }
+
+        /* ////// */
+        .nuser {
+            /* border: 1px solid red; */
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: #f49500;
+            font-size: 25px;
+            line-height: 40px;
+            border-bottom: 3px solid #f49500;
+        }
+        .nuser>div:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #form {
+            /* border: 1px solid red; */
+            /* margin-top: 10px; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        #form>div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            font-size: 17px;
+            word-spacing: 5px;
+            letter-spacing: normal;
+            text-align: left;
+            line-height: 24px;
+
+            /* border: 1px solid red; */
+            height: 450px;
+            width: 600px;
+        }
+
+        #form>div>li {
+            line-height: 30px;
+            letter-spacing: 1px;
+            word-spacing: 5px;
+        }
+
+        .container {
+            width: 85%;
+            border-radius: 10px;
+            height: 400px;
+            /* border: 1px solid rgb(0, 0, 0); */
+            margin: auto;
+            margin-left: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 20px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+         #email,
+        #password {
+            width: 80%;
+            height: 24px;
+            font-size: 17px;
+            padding-left: 15px;
+        }
+        .asa{
+            /* border: 1px solid red; */
+            padding: 13px 120px;
+        }
+
+        .box1>div {
+            padding: 10px;
+            text-align: right;
+        }
+
+        a {
+          color: black;
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .span {
+            margin-left: 20px;
+        }
+
+        .box2 {
+            width: 98%;
+            height: 130px;
+        }
+
+        .box2>div>span {
+            font-size: 18px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: orangered;
+            color: white;
+            display: flex;
+
+            gap: 30px;
+            margin-top: 30px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        button:hover {
+            color: black;
+        }
+
+ 
+       button>div:nth-child(1) {
+            padding-top: 15px;
+ }
+
+.xxx {
+  margin-left: 20px;
+}
+.xxx:hover {
+  margin-left: 50px;
+  color: orangered;
+}
+
+label{
+    display: flex;
+}
+    </style>
+</head>
+
+<body>
+    <div id="Blacknav">
+        <i class="fas fa-phone-alt navf"></i>
+        <a class="sign" href="createacc.html">
+            <div class="navf">Call Us:-+91-9555461555</div>
+        </a>
+        <i class="fas fa-sign-in-alt navf"></i>
+        <a class="sign" href="signin.html">
+            <div class="navf">Sign-In</div>
+        </a>
+        <i class="fas fa-user-tie navf"></i>
+        <a class="sign" href="createacc.html">
+            <div class="navf">Create Account</div>
+        </a>
+        <i class="fas fa-heart navf"></i>
+        <a class="sign" href="cart.html">
+            <div class="navf">wishlist</div>
+        </a>
+    </div>
+    <div class="nav">
+        <a href="index.html">
+            <div class="logo"><img src="https://bit.ly/33eUV11" alt="Logo" /></div>
+        </a>
+        <div><input type="text" placeholder="Search " /></div>
+        <div style="font-size: 0.4rem">
+            <i class="fas fa-shopping-cart fa-4x logo">Shopping Cart</i>
+        </div>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ------------------ -->
+
+    <!-- >>>>>>>>>>>>>>>>>>>>> -->
+    <div id="navDiv2">
+
+
+        <div class="a2" id="fav">
+            <a href="product.html" id="men">
+                <p>SPORTS</p>
+            </a>
+            <a href="product.html" id="women">
+                <p>FITNESS</p>
+            </a>
+            <a href="product.html" id="kid">
+                <p>SHOES</p>
+            </a>
+            <a href="product.html" id="sports">
+                <p>CLOTHING</p>
+            </a>
+            <a href="product.html" id="brands">
+                <p>ACCESSORIES</p>
+            </a>
+            <a href="product.html" id="colle">
+                <p>LEISURE SPORTS</p>
+            </a>
+            <a href="product.html" id="outlet">
+                <p>FANGEAR</p>
+            </a>
+            <a href="product.html" id="outlet">
+                <p>BRANDS</p>
+            </a>
+            </a>
+        </div>
+
+    </div>
+    </div>
+    </nav>
+    </header>
+    <div id="secNav">
+        <div id="navdiva">
+            <div class="navhighlight">Badminton</div>
+            <div class="nava"><a href="product.html">Rackets</a></div>
+            <div class="nava"><a href="product.html">shoes</a></div>
+            <div class="nava"><a href="product.html">Shuttlecock</a></div>
+            <div class="nava"><a href="product.html">grips</a></div>
+            <div class="nava"><a href="product.html">strings</a></div>
+            <div class="nava"><a href="product.html">Kit Bags</a></div>
+            <div class="nava"><a href="product.html">Clothing</a></div>
+            <div class="nava"><a href="product.html">Accessories</a></div>
+            <div class="navhighlight">Basketball</div>
+            <div class="nava"><a href="product.html">Basketballs</a></div>
+            <div class="nava"><a href="product.html">Shoes</a></div>
+            <div class="nava"><a href="product.html">Equipments</a></div>
+        </div>
+        <div id="navdivb">
+            <div>
+                <div class="navhighlight">Boxing</div>
+                <div class="navb"><a href="product.html">Gloves</a></div>
+                <div class="navb"><a href="product.html">Bags</a></div>
+                <div class="navb"><a href="product.html">Accessories</a></div>
+                <div class="navhighlight">cricket</div>
+                <div class="navb"><a href="product.html">English willow</a></div>
+                <div class="navb"><a href="product.html">kshmir willow</a></div>
+                <div class="navb"><a href="product.html">balls</a></div>
+                <div class="navb"><a href="product.html">shoes</a></div>
+                <div class="navb"><a href="product.html">kits Bags</a></div>
+                <div class="navb"><a href="product.html">Cricket sets</a></div>
+                <div class="navb"><a href="product.html">Protective</a></div>
+                <div class="navb"><a href="product.html">clothings</a></div>
+
+            </div>
+            <div>
+                <div class="navhighlight">football</div>
+                <div class="navb2"><a href="product.html">football</a></div>
+                <div class="navb2"><a href="product.html">Accessories & Track Pants</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <div class="navb2"><a href="product.html">shoes</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <div class="navb2"><a href="product.html">Accessories</a></div>
+                <!-- <div class="navb2"><a href="#"></a></div> -->
+                <!-- <div class="navb2"><a href="#"></a></div> -->
+            </div>
+            <div>
+                <div class="navhighlight">Hockey</div>
+                <div class="navb3"><a href="product.html">sticks</a></div>
+                <div class="navb3"><a href="product.html">balls</a></div>
+                <div class="navhighlight">Swimming</div>
+                <div class="navb3"><a href="product.html">swimwear</a></div>
+                <div class="navb3"><a href="product.html">goggles</a></div>
+                <div class="navb3"><a href="product.html">caps</a></div>
+                <div class="navb3"><a href="product.html">Accessories</a></div>
+
+            </div>
+            <div>
+                <div class="navhighlight">golf</div>
+                <div class="navb4"><a href="product.html">golf Accessories</a></div>
+                <div class="navb4"><a href="product.html">golf Accessories </a></div>
+                <div class="navb4"><a href="product.html">golf Accessories</a></div>
+                <div class="navb4"><a href="product.html">golf Accessories</a></div>
+                <div class="navb4"><a href="product.html"> Ball</a></div>
+                <div class="navb4"><a href="product.html">golf Accessories </a></div>
+                <div class="navb4"><a href="product.html">golf Accessories</a></div>
+                <div class="navb4"><a href="product.html">golf Accessories </a></div>
+            </div>golf Accessories>
+            <div class="navhighlight">squash</div>
+            <div class="navb4"><a href="product.html">rackets</a></div>
+            <div class="navb4"><a href="product.html">rackets </a></div>
+            <div class="navb4"><a href="product.html">Accessories</a></div>
+            <div class="navb4"><a href="product.html">Accessories</a></div>
+            <div class="navb4"><a href="product.html">Accessories </a></div>
+            <div class="navb4"><a href="product.html">Accessories </a></div>
+            <div class="navb4"><a href="product.html">rackets</a></div>
+            <div class="navb4"><a href="product.html">kit</a></div>
+        </div>
+    </div>
+
+    </div>
+    <div class="nuser">
+        <div>NEW USER</div>
+        <div>REGISTRATION</div>
+    </div>
+    <div id="form">
+        <div>
+            <p>
+                At Sportsjam.in, buy your favourite brand and sportsgear at great prices. Don't forget to use our
+                welcome gift vouchers
+                (worth Rs.2000)* for more savings! <br><br>
+                Register online and and enjoy the following benefits:
+                <li>Get Discount Vouchers, Special Promotions & Offers</li>
+                <li>Checkout faster while making your purchases</li>
+                <li>View your Order History and track your Order Status</li>
+                <li>Make changes to your account information or password</li>
+            </p>
+        </div>
+        <div>
+            <div class="main">
+
+                <div class="container">
+                    <div class="box1">
+                        <label id="asa" for="">first Name</label>
+                        <input id="asa" type="text" class="asa">
+                        <label  for="">Mobile No</label>
+                        <input  type="text" class="asa"><br>
+                        <label>Email *</label>
+                        <input  type="text" name="" id="email"> <br>
+                        <label for="">Password</label>
+                        <input type="password" name="" id="password">
+                    </div>
+
+                    <div class="box3">
+                        <div class="button">
+                            <button class="register">
+                                <div>REGISTER</div>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+</body>
+
+</html>
+<script>
+    document.querySelector(".register").addEventListener("click", register);
+    var user = JSON.parse(localStorage.getItem("userData")) || [];
+    function register() {
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+        var userCredentials = {
+            emailAddress: email,
+            passWord: pass,
+        };
+        user.push(userCredentials);
+        localStorage.setItem("userData", JSON.stringify(user));
+        if (email.length == 0 && pass.length == 0) {
+            alert("please give correct crendentials");
+        } else {
+            alert("Redirecting to Login Page");
+            window.location.href = "LOGINPAGE.html";
+        }
+    }
+    document.getElementById("show").addEventListener(
+        "click",
+        function () {
+            return false;
+        },
+        false
+    );
+   
+</script>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINGLE PAGE CHECKOUT ||SPORTSJAM</title>
+    <link rel="icon" href="https://bit.ly/3ES33CN" type="image/x-icon" />
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #logoImgA {
+            width: 60px;
+            margin-left: 100px;
+        }
+
+        #navContainerA {
+            display: flex;
+            margin-left: 70px;
+        }
+
+        #navContainerA>div>div {
+            width: 18px;
+            height: 20px;
+            color: white;
+            background-color: black;
+            border-radius: 50%;
+            margin: -4px 10px 10px 30px;
+            text-align: center;
+            padding: 2px;
+            font-size: 14px;
+        }
+
+        #navContainerA>div {
+            display: flex;
+            font-size: 12px;
+            margin-top: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        #queA {
+            color: gray;
+            margin-left: 200px;
+        }
+
+        .marginA {
+            margin-left: 100px;
+        }
+
+        #addContainerA {
+            display: flex;
+            width: 85%;
+            margin-left: 100px;
+        }
+
+        #leftA {
+            width: 68%;
+        }
+
+        #rightA {
+            width: 28%;
+            margin-left: 4%;
+        }
+
+        .checkBox {
+            width: 25px;
+            height: 25px;
+        }
+
+        .numA {
+            width: 65%;
+            height: 50px;
+            margin-bottom: 40px;
+        }
+
+        .dateA {
+            width: 30%;
+            height: 50px;
+            margin-right: 3%;
+        }
+
+        #queBox {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(189, 189, 189);
+            padding: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -80px;
+            margin-left: 520px;
+        }
+
+        #exA {
+            font-size: 12px;
+            color: grey;
+            line-height: 0px;
+        }
+
+        #cashDel {
+            width: 98%;
+            margin-top: 50px;
+        }
+
+        #placeOrd {
+            width: 60%;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        #orderA {
+            border: 1px solid rgb(158, 157, 157);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        #promoA {
+            width: 98%;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #helpA {
+            border: 1px solid rgb(158, 157, 157);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        #lastPara {
+            width: 97.5%;
+            height: 60px;
+            margin-top: 100px;
+            background-color: rgb(65, 63, 63);
+            color: rgb(179, 179, 179);
+            font-size: 12px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #lastPara>a {
+            color: white;
+        }
+
+        #upperlogo {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        #blacke {
+            width: 700px;
+            margin-left: 10px;
+            font-size: 17px;
+            background-color: rgb(39, 38, 38);
+            color: rgb(228, 225, 225);
+        }
+
+        #blacke>i:hover {
+            text-decoration: underline;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <DIV id="upperlogo"><img height="75px" src="https://image3.mouthshut.com/images/imagesp/m/925992166s.jpg" alt="">
+    </DIV>
+    <div id="leftA">
+        <div id="blacke">
+            <div>1</div> Quick Checkout For nikamswaraj111@gmail.com <B>MAKE CHANGES</B>
+        </div>
+        <hr>
+        <div id="cardPay">
+            <!-- <input class="checkBox" type="checkbox"> <span>Credit/Debit Card</span>
+                <p>You may be directed to your bank's 3D secure process to authenticate your information.</p> -->
+            <div>
+                <label for="">CARD NUMBER</label><BR><input class="numA" type="number" placeholder="Card Number *">
+                <img
+                    src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enIN/Images/visa-master-rupay-cd_tcm209-732258.png">
+            </div>
+            <div><LABEl>CARD HOLDER NAME</LABEl><BR>
+                <input class="numA" type="text" placeholder="Name On Card *"><BR>
+                <LABEL>MM/YY</LABEL>
+                <input class="dateA" type="text" placeholder="MM/YY *">
+                <LABEL>CVV</LABEL>
+                <input class="dateA" type="number" placeholder="CVV *"><BR>
+
+            </div>
+            <p id="exA">Card expiry date</p>
+            <hr id="lineStyle">
+            <!-- <div id="queBox">?</div> -->
+        </div>
+        <div id="cashDel">
+            <input class="checkBox" type="checkbox"> <span>Cash on Delivery</span><br><br><br><br>
+            <button onclick="place()" id="placeOrd">PLACE ORDER &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
+                &ensp; &ensp; &ensp;
+                &ensp; &ensp; &ensp;&ensp; &ensp; &ensp;&ensp; &ensp; &ensp;&ensp; &ensp; &ensp;
+                &#8594</button>
+        </div>
+    </div>
+
+    <div id="lastPara">
+        | <a href="#">Privacy Statement</a> | <a href="#">Terms & Conditions</a><br><br>
+        <div>© 2021 adidas India Marketing Private Limited</div>
+    </div>
+</body>
+
+</html>
+<script>
+    var bill = JSON.parse(localStorage.getItem("Final"));
+    var total = document.getElementById("pA2")
+    total.style.fontWeight = "bold";
+    total.textContent = bill;
+    function place() {
+        alert("Order Placed Successfully")
+        window.location.href = "index.html"
+    }
+</script>

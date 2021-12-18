@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        ADMIN Sportsjam
+    </title>
+    <link rel="icon" href="https://bit.ly/3ES33CN" type="image/x-icon" />
+    <style>
+        body {
+            background: #ffd89b;
+            background: -webkit-linear-gradient(to right, #19547b, #ffd89b);
+            background: linear-gradient(to right, #19547b, #ffd89b);
+            background-size: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: navy;
+        }
+
+        .Admindiv {
+
+            height: 550px;
+            border-radius: 50px;
+            width: 40%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+                rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            /* text-align: center; */
+        }
+
+        .Admindiv:hover {
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        .inputdiv {
+            padding: 4%;
+            margin-top: 10px;
+            width: 90.5%;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        .selectdiv {
+            padding: 4%;
+            width: 98%;
+            border: transparent;
+            margin-top: 10px;
+            text-align: center;
+            /* color: #fc2779; */
+            border-radius: 10px;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .selectdiv>option {
+            border: transparent;
+        }
+
+        .inputsubmit {
+            /* border: 21px green; */
+            padding: 3%;
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: gray;
+        }
+
+        button {
+            color: black;
+            width: 98%;
+            margin-top: 2%;
+            padding: 4%;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-left: 5px;
+            color: gray;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ADMIN</h1>
+    <div class="Admindiv">
+        <form id="form">
+            <input id="name" type="text" placeholder="enter name of product" class="inputdiv" />
+            <input id="price" type="number" placeholder="Enter price" class="inputdiv" />
+            <select id="select" class="selectdiv">
+                <option value="tee">Product Type</option>
+                <option value="shoes">SPORTS</option>
+                <option value="shirt">FITNESS</option>
+                <option value="tee"> ACCESSORIES</option>
+                <option value="shoes">LEISURE SPORTS</option>
+                <option value="shirt"> FANGEAR</option>
+                <option value="shirt"> BRANDS</option>
+            </select>
+            <input id="img" type="text" placeholder="Enter image url" class="inputdiv" />
+            <input type="submit" class="inputsubmit" />
+        </form>
+
+        <button>Go to Product page</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.querySelector("#form").addEventListener("submit", addItem);
+    var prod = JSON.parse(localStorage.getItem("shoppingItems")) || [];
+    function addItem(event) {
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var price = document.querySelector("#price").value;
+        var type = document.querySelector("#select").value;
+        var image = document.querySelector("#img").value;
+
+        var prodObj = {
+            name: name,
+            price: price,
+            type: type,
+            image: image,
+        };
+        prod.push(prodObj);
+        localStorage.setItem("shoppingItems", JSON.stringify(prod));
+    }
+
+    document.querySelector("button").addEventListener("click", function () {
+        window.location.href = "Product.html";
+    });
+</script>

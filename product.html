@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <link rel="stylesheet" href="product.css"> -->
+  <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="product.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <style>
+    /* {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{NAVBAR}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} */
+    #Blacknav {
+      /* border: 1px solid red; */
+      height: 40px;
+      /* width: 100%; */
+      background-color: rgb(22, 21, 21);
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 17px;
+      font-family: "Open Sans Condensed", sans-serif;
+    }
+
+    .sign {
+      text-decoration: none;
+    }
+
+    .navf {
+      /* font-weight:500; */
+      color: white;
+      line-height: 30px;
+      word-spacing: 7px;
+      /* margin: auto; */
+      /* border: 1px solid red; */
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+
+    .navf:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      /* border: 1px solid red; */
+      height: 110px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .logo {
+      /* border: 1px solid red; */
+      cursor: pointer;
+    }
+
+    input {
+      border: 1px solid black;
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-size: 17px;
+    }
+
+    input:hover {
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    .a2>a>p:hover {
+      color: white;
+      transition: 0.1s;
+      background-color: black;
+      border: 2px solid black;
+    }
+
+    .a2>a:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      background-color: rgb(31, 28, 28);
+      transition: 0.1s;
+      /* padding-right: 1.5px; */
+      /* padding-left: .5px; */
+      color: white;
+    }
+
+    .a2>a {
+      text-decoration-line: none;
+      color: black;
+      /* padding: 2.5px; */
+      /* background-color: white; */
+    }
+
+    #navDiv2 {
+      border: 1px solid rgb(204, 201, 201);
+      width: 100%;
+      height: 40px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      margin-left: 30px;
+    }
+
+    #navDiv2>a>img {
+
+      width: 70px;
+      height: 47px;
+      padding: 16px;
+    }
+
+    #fav {
+      /* border: 2px solid red; */
+      display: flex;
+      flex: wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 45px;
+      transition: top .1s;
+    }
+
+    #bag2 {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    /* 
+#bag1 {
+  margin-top: 5px;
+} */
+    #bag2 {
+      margin-top: 20px;
+    }
+
+    #mainContent {
+      /* margin-top: 300px; */
+      padding-top: 200px;
+      width: 20%;
+    }
+
+    #secNav {
+      position: fixed;
+      border: 0px solid red;
+      height: 300px;
+      margin-left: 25px;
+      width: 90%;
+      position: fixed;
+      background-color: rgb(255, 255, 255);
+      margin-top: 10px;
+      display: none;
+      display: block;
+      transition: top 0.8s;
+    }
+
+    #navdiva {
+      padding: 30px;
+      grid-area: a;
+      border: rgb(235, 235, 235) solid 0.5px;
+      padding-left: 150px;
+      background-color: white;
+    }
+
+    #navdivb {
+      padding: 30px;
+      grid-area: b;
+      display: flex;
+      gap: 140px;
+      border: rgb(228, 228, 228) solid 0.5px;
+      padding-left: 100px;
+      background-color: white;
+    }
+
+    #navdivd {
+      grid-area: d;
+      border: rgb(231, 231, 231) solid 0.5px;
+      padding-left: 96px;
+      display: flex;
+      gap: 175px;
+      background-color: white;
+      row-gap: 40px;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+        rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+        rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    }
+
+    #secNav {
+
+      display: grid;
+      grid-template-areas: "a b b b b""a b b b b""a b b b b""a b b b b""c d d d d";
+      display: none;
+
+    }
+
+    .navhighlight {
+      font-weight: bolder;
+      margin-left: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration: none;
+      color: black;
+    }
+
+    #navdiva>div {
+      padding: 4px;
+    }
+
+    #navdivb>div>div {
+      padding: 4px;
+    }
+
+    input {
+      vertical-align: top;
+    }
+
+    /* {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{NAVBAREND}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content:space-evenly; */
+      gap: 30px;
+      width: 98%;
+      /* height: 3000px; */
+      /* border: 11px solid maroon; */
+    }
+
+    /* .box1{
+    border: 1px solid red;
+    height: 800px;
+    width: 20%;
+} */
+    .box2 {
+      display: flex;
+      flex-wrap: wrap;
+      /* gap: 20px; */
+      justify-content: space-evenly;
+      /* border: 2px solid red; */
+      /* margin-left: 120px; */
+      width: 100%;
+    }
+
+    /* >>>>>>>>>>>>>DOMpage>>>>>>>>>>>>>>>>>>>>>>>>>*/
+    #cont {
+      display: flex;
+      width: 100%;
+      /* height: 2500px; */
+      flex-wrap: wrap;
+
+      border: transparent;
+      justify-content: space-evenly;
+      background-color: white
+    }
+
+    #cont>div>img {
+      width: 60%;
+      height: 300px;
+      /* border: 1px solid black; */
+      transition: transform 0.2s;
+
+    }
+
+    #cont>div>img:hover {
+
+      transform: scale(1.2);
+    }
+
+    #cont>div>button {
+      padding: 10px;
+      margin-left: 130px;
+      /* background-color: green; */
+      color: black;
+      /* transform: scale(1.2); */
+      /* border: 0px; */
+      border-radius: 10px;
+      margin-bottom: 40px;
+      /* align-items: center; */
+    }
+
+    /* #cont>div>button:hover{
+         background-color: green;
+         color: white;
+         transform: scale(1.2);
+         border: 0px;
+         border-radius: 10px;
+    } */
+    #cont>div>h2 {
+      /* color: #eb2d06; */
+      text-align: center;
+    }
+
+    #cont>div>p {
+      color: #eb2d06;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+
+      text-align: center;
+    }
+
+    /* .......................................... */
+    .box2>div {
+      border-radius: 5px;
+      /* border: 1px solid black; */
+      height: 475px;
+      width: 350px;
+
+    }
+
+    .wish {
+      /* border: 2px solid black; */
+      height: 30px;
+      width: 35px;
+      float: right;
+    }
+
+    .imgs {
+      height: 70%;
+      width: 98%;
+      /* border: 1px solid red; */
+    }
+
+    .box2>div:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .txt {
+      /* text-align: center; */
+      /* line-height: 40px; */
+      font-size: 20px;
+      font-weight: 100;
+      color: rgb(34, 37, 39);
+      border-radius: 15px;
+      /* border: 2px solid red; */
+      height: 50px;
+      width: 98%;
+      margin-top: 3%;
+    }
+
+    .price>span {
+      text-decoration: line-through;
+    }
+
+    .price {
+      color: rgb(34, 37, 39);
+      margin-left: 100px;
+      border-radius: 15px;
+      /* border: 1px solid green; */
+      margin-top: 3%;
+      height: 10%;
+    }
+
+    /* #xxx{
+  
+display: flex;
+/* gap: 10px; */
+    /* } */
+    /* #xxx>div:nth-child(1){
+width: 20%;
+border: 1px solid black;
+height: 1000px; */
+
+    /* } */
+    #xxx>div:nth-child(2) {
+      width: 100%;
+      margin-left: 10px;
+      /* border: 1px solid black; */
+      height: 1000px;
+
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<dompage>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    #cont {
+      display: flex;
+      width: 100%;
+      /* border: 1px solid red; */
+      justify-content: space-around;
+      /* height: 2500px; */
+      /* flex-wrap: wrap; */
+
+      /* border: 1px solid red; */
+      background-color: #eeeeea;
+
+    }
+
+    #cont>div>img {
+      width: 70%;
+      height: 300px;
+      border: 1px solid black;
+      transition: transform 0.2s;
+
+    }
+
+    #cont>div>img:hover {
+
+      transform: scale(1.2);
+    }
+
+    #cont>div>button {
+      padding: 10px;
+      margin-left: 130px;
+      /* background-color: green; */
+      color: black;
+      /* transform: scale(1.2); */
+      /* border: 0px; */
+      border-radius: 10px;
+      margin-bottom: 40px;
+      /* align-items: center; */
+    }
+
+    #cont>div>button:hover {
+
+      background-color: green;
+      color: white;
+      transform: scale(1.2);
+      border: 0px;
+      border-radius: 10px;
+    }
+
+    #cont>div>h2 {
+      /* color: #eb2d06; */
+      text-align: center;
+    }
+
+    #cont>div>p {
+      color: #eb2d06;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+
+      text-align: center;
+    }
+
+    .sort {
+      display: flex;
+      /* justify-content: space-between; */
+      border-radius: 6px;
+      background: rgb(22, 22, 22);
+      background: radial-gradient(circle,
+          rgba(22, 22, 22, 1) 0%,
+          rgba(225, 225, 225, 1) 100%);
+      /* border: 1px solid blue; */
+      height: 45px;
+    }
+
+    #nameSort,
+    #priceSort,
+    button {
+      margin-left: 22px;
+      padding: 10px 40px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    /* 
+    #nameSort,#priceSort,button :hover {
+       background-color: black; 
+      color: whitesmoke; 
+    /* } */
+  </style>
+  <link rel="icon" href="https://bit.ly/3ES33CN" type="image/x-icon" />
+</head>
+
+<body>
+
+  <div id="Blacknav">
+    <i class="fas fa-phone-alt navf"></i>
+    <a class="sign" href="createacc.html">
+      <div class="navf">Call Us:-+91-9555461555</div>
+    </a>
+    <i class="fas fa-sign-in-alt navf"></i>
+    <a class="sign" href="LOGINPAGE.html">
+      <div class="navf">Sign-In</div>
+    </a>
+    <i class="fas fa-user-tie navf"></i>
+    <a class="sign" href="CREATEPAGE.html">
+      <div class="navf">Create Account</div>
+    </a>
+    <i class="fas fa-heart navf"></i>
+    <a class="sign" href="cart.html">
+      <div class="navf">wishlist</div>
+    </a>
+  </div>
+  <div class="nav">
+    <a href="index.html">
+      <div class="logo"><img src="https://bit.ly/33eUV11" alt="Logo" /></div>
+    </a>
+    <div><input type="text" placeholder="Search " /></div>
+    <div style="font-size: 0.5rem">
+      <i class="fas fa-shopping-cart fa-4x logo">shopping Cart</i>
+    </div>
+  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- >>>>>>>>>>>>>>>>>>>>> -->
+  <div id="navDiv2">
+
+    <div class="a2" id="fav">
+      <a href="product.html" id="men">
+        <p>SPORTS</p>
+      </a>
+      <a href="product.html" id="women">
+        <p>FITNESS</p>
+      </a>
+      <a href="product.html" id="kid">
+        <p>SHOES</p>
+      </a>
+      <a href="product.html" id="sports">
+        <p>CLOTHING</p>
+      </a>
+      <a href="product.html" id="brands">
+        <p>ACCESSORIES</p>
+      </a>
+      <a href="product.html" id="colle">
+        <p>LEISURE SPORTS</p>
+      </a>
+      <a href="product.html" id="outlet">
+        <p>FANGEAR</p>
+      </a>
+      <a href="product.html" id="outlet">
+        <p>BRANDS</p>
+      </a>
+      </a>
+    </div>
+
+  </div>
+  </div>
+  </nav>
+  </header>
+  <div id="secNav">
+    <div id="navdiva">
+      <div class="navhighlight">Badminton</div>
+      <div class="nava"><a href="product.html">Rackets</a></div>
+      <div class="nava"><a href="product.html">shoes</a></div>
+      <div class="nava"><a href="product.html">Shuttlecock</a></div>
+      <div class="nava"><a href="product.html">grips</a></div>
+      <div class="nava"><a href="product.html">strings</a></div>
+      <div class="nava"><a href="product.html">Kit Bags</a></div>
+      <div class="nava"><a href="product.html">Clothing</a></div>
+      <div class="nava"><a href="product.html">Accessories</a></div>
+      <div class="navhighlight">Basketball</div>
+      <div class="nava"><a href="product.html">Basketballs</a></div>
+      <div class="nava"><a href="product.html">Shoes</a></div>
+      <div class="nava"><a href="product.html">Equipments</a></div>
+    </div>
+    <div id="navdivb">
+      <div>
+        <div class="navhighlight">Boxing</div>
+        <div class="navb"><a href="product.html">Gloves</a></div>
+        <div class="navb"><a href="product.html">Bags</a></div>
+        <div class="navb"><a href="product.html">Accessories</a></div>
+        <div class="navhighlight">cricket</div>
+        <div class="navb"><a href="product.html">English willow</a></div>
+        <div class="navb"><a href="product.html">kshmir willow</a></div>
+        <div class="navb"><a href="product.html">balls</a></div>
+        <div class="navb"><a href="product.html">shoes</a></div>
+        <div class="navb"><a href="product.html">kits Bags</a></div>
+        <div class="navb"><a href="product.html">Cricket sets</a></div>
+        <div class="navb"><a href="product.html">Protective</a></div>
+        <div class="navb"><a href="product.html">clothings</a></div>
+
+      </div>
+      <div>
+        <div class="navhighlight">football</div>
+        <div class="navb2"><a href="product.html">football</a></div>
+        <div class="navb2"><a href="product.html">Accessories & Track Pants</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <div class="navb2"><a href="product.html">shoes</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <div class="navb2"><a href="product.html">Accessories</a></div>
+        <!-- <div class="navb2"><a href="#"></a></div> -->
+        <!-- <div class="navb2"><a href="#"></a></div> -->
+      </div>
+      <div>
+        <div class="navhighlight">Hockey</div>
+        <div class="navb3"><a href="product.html">sticks</a></div>
+        <div class="navb3"><a href="product.html">balls</a></div>
+        <div class="navhighlight">Swimming</div>
+        <div class="navb3"><a href="product.html">swimwear</a></div>
+        <div class="navb3"><a href="product.html">goggles</a></div>
+        <div class="navb3"><a href="product.html">caps</a></div>
+        <div class="navb3"><a href="product.html">Accessories</a></div>
+
+      </div>
+      <div>
+        <div class="navhighlight">golf</div>
+        <div class="navb4"><a href="product.html">golf Accessories</a></div>
+        <div class="navb4"><a href="product.html">golf Accessories </a></div>
+        <div class="navb4"><a href="product.html">golf Accessories</a></div>
+        <div class="navb4"><a href="product.html">golf Accessories</a></div>
+        <div class="navb4"><a href="product.html"> Ball</a></div>
+        <div class="navb4"><a href="product.html">golf Accessories </a></div>
+        <div class="navb4"><a href="product.html">golf Accessories</a></div>
+        <div class="navb4"><a href="product.html">golf Accessories </a></div>
+      </div>golf Accessories>
+      <div class="navhighlight">squash</div>
+      <div class="navb4"><a href="product.html">rackets</a></div>
+      <div class="navb4"><a href="product.html">rackets </a></div>
+      <div class="navb4"><a href="product.html">Accessories</a></div>
+      <div class="navb4"><a href="product.html">Accessories</a></div>
+      <div class="navb4"><a href="product.html">Accessories </a></div>
+      <div class="navb4"><a href="product.html">Accessories </a></div>
+      <div class="navb4"><a href="product.html">rackets</a></div>
+      <div class="navb4"><a href="product.html">kit</a></div>
+    </div>
+  </div>
+
+  </div>
+
+  <div>
+    <div class="sort">
+      <select name="" id="priceSort" onchange="handlePriceSort()">
+        <option value="">SORT BY PRICE</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+      <a href="payment.html">
+        <button>ADD To Cart</button></a>
+      <select name="" id="nameSort" onchange="handleNameSort()">
+        <option value="">SORT BY NAME</option>
+        <option value="asc">Ascending</option>
+        <option value="dsc">Descending</option>
+      </select>
+<a href="Payment.html">
+      <button>Add to Cart </button></a>
+    </div>
+    <div id="cont"></div>
+    <div class="container">
+
+      <div class="box1">
+
+      </div>
+      <div class="box2">
+
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXEXBLT63.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS07DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXBDSHM600SUPY.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXBDSHM600SUPY3.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXBDSHM600SUPY10.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/VCSH910FBLPWH.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/BB30F21034060.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/BB31F21041068.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/BB31F21062035.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/BB30F21012033.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div> -->
+        <div>
+          <div class="imgs"><img height="320px" width="88%"
+              src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXAS1DG.jpg"
+              alt="">
+            <div class="wish"> <i class="far fa-heart fa-2x"></i></div>
+          </div>
+          <div class="txt">Yonex Astrox 01 Feel Badminton Racket (black/Yellow)</div>
+          <div class="price"><span>₹3150</span>₹1999 </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+
+</html>
+<script>
+  var products = JSON.parse(localStorage.getItem("shoppingItems"));
+  var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+  console.log(cart.length);
+  document.querySelector("button").textContent = cart.length;
+  displayItem(products);
+
+  function handlePriceSort() {
+    var selected = document.querySelector("#priceSort").value;
+    console.log(selected);
+    if (selected == "high") {
+      products.sort(function (a, b) {
+        return Number(b.price) - Number(a.price);
+      });
+    }
+    if (selected == "low") {
+      products.sort(function (a, b) {
+        return Number(a.price) - Number(b.price);
+      });
+    }
+    //console.log(products);
+    displayItem(products);
+  }
+
+  function handleNameSort() {
+    var selected = document.querySelector("#nameSort").value;
+    console.log(selected);
+
+    if (selected == "asc") {
+      products.sort(function (a, b) {
+        if (a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        return 0;
+      });
+    }
+    if (selected == "dsc") {
+      products.sort(function (a, b) {
+        if (a.name > b.name) return -1;
+        if (a.name < b.name) return 1;
+        return 0;
+      });
+    }
+    displayItem(products);
+  }
+
+  function displayItem(products) {
+    document.querySelector("#cont").textContent = "";
+    products.map(function (elem) {
+      var div = document.createElement("div");
+      var img = document.createElement("img");
+      img.setAttribute("src", elem.image);
+
+      var h2 = document.createElement("h2");
+      h2.textContent = elem.name;
+
+      var price = document.createElement("p");
+      price.textContent = elem.price;
+
+      var button = document.createElement("button");
+      button.textContent = "add to cart";
+      button.addEventListener("click", function () {
+        console.log(elem);
+        addToCart(elem);
+      });
+
+      div.append(img, h2, price, button);
+      document.querySelector("#cont").append(div);
+    });
+  }
+
+  function addToCart(elem) {
+    console.log(elem);
+    cart.push(elem);
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+    windows.location.href = "cart.html"
+  }
+
+</script>

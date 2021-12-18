@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Document</title> -->
+    <title>SPORTSJAM SIGNIN</title>
+<script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="https://bit.ly/3ES33CN" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        body {
+            /* background-image: url("home.png"); */
+            height: 730px;
+            background: rgb(251,244,244);
+background: linear-gradient(90deg, rgba(251,244,244,1) 0%, rgba(18,18,18,1) 100%);         
+            /* background: #E55D87;
+            background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);
+            background: linear-gradient(to right, #5FC3E4, #E55D87); */
+        }
+        .maindiv {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 50%;
+            height: 70%;
+            margin-top: 50px;
+            padding-left: 50px;
+            padding-right: 20px;
+            display: flex;
+            gap: 80px;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            /* border-radius: 120px; */
+            /* width: 450px; */
+            /* border: 11px solid grey; */
+        }
+        .div1 {
+            width: 80%;
+            height: 100%;
+        }
+
+        #email {
+            margin-top: 20px;
+        }
+
+        #email,
+        #password {
+            width: 95%;
+            height: 50px;
+            font-size: 17px;
+            padding-left: 15px;
+        }
+
+        .box1>div {
+            padding: 10px;
+            text-align: right;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .button>button {
+            margin-left: 80px;
+            padding: 12px 160px;
+            /* text-align: center; */
+            background-color: rgb(253, 96, 39);
+            border-radius: 5px;
+            border: transparent;
+            color: white;
+            display: flex;
+            /* gap: 30px; */
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        button:hover  {
+            color: black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+            
+        
+
+
+        button>div:nth-child(1) {
+            /* padding: 15px; */
+            font-size: large;
+            cursor: pointer;
+            /* padding-left: 80px; */
+        }
+
+
+        h1 {
+            font-size: 40px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+
+        label {
+            color: #555558;
+            font-size: 25px;
+        }
+
+        #news {
+
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+            font-size: 18px;
+            
+        }
+        .google{
+            /* border: 1px solid black; */
+            height: 45px;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+        .google>div{
+            height: 45px;
+            width: 200px;
+            /* border: 1px solid red; */
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+       .google>div:hover {
+            
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #a{
+            background-color: royalblue;
+        }
+        #b{
+background-color: red;
+        } 
+           </style>
+</head>
+
+<body>
+    <div class="logo"><img src= "https://image3.mouthshut.com/images/imagesp/m/925992166s.jpg" alt=""></div>
+    <div class="maindiv">
+        <div class="div1">
+            <h1>SIGN IN</h1>
+            <div class="box1">
+                <label for="">E-mail id</label>
+                <input type="text" id="email" placeholder="Email *" /><br>
+                <label for="">password</label>
+                <input type="password" id="password" placeholder="Password *" /><br />
+            </div>
+            <div id="news">
+                <a href="CREATEPAGE.html"> <div>New User? Register </div></a>
+                <a href="CREATEPAGE.html"><div>Fogot Password</div></a>
+            </div>
+            <div class="button">
+                <button class="login">
+                    <div>LOGIN</div>
+                </button>
+                <div class="google">
+                    <div id="a">
+                    <i class="fab fa-facebook fa-2x"></i> Sign in with facebook</div>
+                    <div id="b">
+                        <i class="fab fa-google-plus fa-2x"></i>Sign in with Google</div>
+                </div>
+            </div>
+</body>
+
+</html>
+<script>
+
+    document.querySelector(".login").addEventListener("click", login);
+    var regdUsers = JSON.parse(localStorage.getItem("userData"));
+    console.log(regdUsers);
+    // function show() {
+    //   // return false;
+    //   this.event.preventDefault();
+    // }
+    document.getElementById("show").addEventListener(
+        "click",
+        function () {
+            return false;
+        },
+        false
+    );
+    var cccc = 0;
+    function login(event) {
+        event.preventDefault
+        var email = document.querySelector("#email").value;
+        var pass = document.querySelector("#password").value;
+        //if (email !== regdUsers[0].emailAddress || pass !== regdUsers[0].passWord) {
+        // alert("wrong credentials");
+        console.log(email, pass);
+        // } else {
+        for (var i = 0; i < regdUsers.length; i++) {
+            cccc++;
+            console.log(regdUsers[i].emailAddress, email);
+            console.log(regdUsers[i].passWord, pass);
+
+            if (email === "admin" && pass === "admin") {
+                alert("Admin Login sucessfull")
+                window.location.href = "admin.html";
+            }
+            else if (
+                regdUsers[i].emailAddress === email &&
+                regdUsers[i].passWord === pass
+            ) {
+                alert("Login Successfull");
+                window.location.href = "index.html";
+
+                break;
+            }
+        }
+        if (cccc >= regdUsers.length) alert(" Wrong Credential");
+    }
+
+    var show = document.getElementById("show").addEventListener("click", show);
+    function show() {
+
+        var password = document.getElementById("password");
+        if (password.type === "password") {
+            password.type = "text";
+        } else {
+            password.type = "password";
+        }
+    }
+</script>
